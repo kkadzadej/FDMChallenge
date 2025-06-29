@@ -3,6 +3,7 @@ from pathlib import Path
 DATA_INPUT_FOLDER = Path(__file__).parent / "data" / "inputs"
 
 GET_DATA_API_ENDPOINT = "/get_data/"
+POST_RESULT_API_ENDPOINT = "/september_batches/"
 
 PRODUCT_GRADE_MAPPING = {
 "Rebar": ["B500A", "B500B", "B500C"],

@@ -16,5 +16,5 @@ For simplicity these changes were done manually in this example. The data transf
    3. The daily production schedule was transformed to a single column where the datetime for each batch was changed
    to also include the right day. This format again better befits a database and makes the data easier to work with.
    4. The files were uploaded as .csv instead of .xslx for simplicity.
-3. The hourly production schedule is assumed to be the required output for ScrapChef to work, so the program will create
-a production schedule for September based on the production history and order forecast. 
+3. The logic and assumptions made to get the grade heat breakdown is explained in docstrings in the
+get_grade_batch_breakdown_for_september method in /main/main.py.
