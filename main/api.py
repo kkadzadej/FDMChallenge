@@ -6,16 +6,16 @@ from main.main import MainApp
 
 api = FastAPI()
 
+@api.get("/")
+def home():
+    return "FDM Challenge API"
+
 @api.post(POST_RESULT_API_ENDPOINT)
 def post_september_results():
     main_app = MainApp()
     snapchef_grade_batches_for_september = main_app.run(from_api=False)
 
     return snapchef_grade_batches_for_september
-
-@api.get("/")
-def home():
-    return "FDM Challenge API"
 
 @api.get(GET_DATA_API_ENDPOINT)
 def get_data():

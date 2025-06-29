@@ -22,7 +22,8 @@ For simplicity these changes were done manually in this example. The data transf
    4. The files were uploaded as .csv instead of .xslx for simplicity.
 3. The logic and assumptions made to get the grade heat breakdown is explained in docstrings in the
 get_grade_batch_breakdown_for_september method in /main/main.py.
-4. For simplicity the files are read directly from disk rather than from the database after they are written into the database.
+4. The database is created automatically from run.py. The schemas used are defined in constants.py
+5. For simplicity the files are read directly from disk rather than from the database after they are written into the database.
 
 ____________________________________________________________________________________________________________________________________
 
