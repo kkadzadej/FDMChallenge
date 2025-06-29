@@ -13,4 +13,4 @@ if __name__ == "__main__":
     main_app = MainApp()
     scrapchef_inputs = main_app.run(from_api=False)
     response = requests.post("http://127.0.0.1:8000/september_batches/").json()
-    print("kot")
+    print(response)
