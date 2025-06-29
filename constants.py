@@ -4,6 +4,13 @@ DATA_INPUT_FOLDER = Path(__file__).parent / "data" / "inputs"
 
 GET_DATA_API_ENDPOINT = "/get_data/"
 
+PRODUCT_GRADE_MAPPING = {
+"Rebar": ["B500A", "B500B", "B500C"],
+"MBQ": ["A36", "A5888", "GR50", "44W", "50W", "55W", "60W"],
+"SBQ": ["S235JR", "S355J", "C35", "C40"],
+"CHQ": ["A53/A543","A53/C591"]
+}
+
 daily_charge_schedule_schema = {
     "Start time": {
         "type": "DateTime",
@@ -18,7 +25,7 @@ daily_charge_schedule_schema = {
     }
 }
 
-order_forcecast_schema = {
+product_groups_monthly_schema = {
     "date": {
         "type": "DateTime",
         "index": True,
@@ -92,5 +99,15 @@ steel_grade_production_schema = {
     "A53/C591": {
         "type": "Float"
     }
+}
+
+DAILY_CHARGE_SCHEDULE = "daily_charge_schedule"
+PRODUCT_GROUP_MONTHLY = "product_groups_monthly"
+STEEL_GRADE_PRODUCTION = "steel_grade_production"
+
+db_schema = {
+    f"{DAILY_CHARGE_SCHEDULE}_schema": daily_charge_schedule_schema,
+    f"{PRODUCT_GROUP_MONTHLY}_schema": product_groups_monthly_schema,
+    f"{STEEL_GRADE_PRODUCTION}_schema": steel_grade_production_schema
 }
 
