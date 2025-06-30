@@ -10,7 +10,7 @@ api = FastAPI()
 def home():
     return "FDM Challenge API"
 
-@api.post(POST_RESULT_API_ENDPOINT)
+@api.get(POST_RESULT_API_ENDPOINT)
 def post_september_results():
     main_app = MainApp()
     snapchef_grade_batches_for_september = main_app.run(from_api=False)
